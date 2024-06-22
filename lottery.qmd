@@ -20,7 +20,7 @@ library(tidyr)
 
 ## 숫자 별 당첨 횟수 분석 그래프
 
-1000회에서 1124회까지 크롤링을 통해 당첨 데이터 수집 =\> 크롤링 후 각 숫자 별 당첨 횟수를 그래프로 나타냄
+1회에서 1125회까지 크롤링을 통해 당첨 데이터 수집 =\> 크롤링 후 각 숫자 별 당첨 횟수를 그래프로 나타냄
 
 ```{r}
 #| label: lottery
@@ -33,9 +33,12 @@ library(dplyr)
 library(ggplot2)
 library(stringr)
 
+st = 1
+ed = 1125
+
 # URL 및 번호 설정
 url <- 'https://www.dhlottery.co.kr/gameResult.do?method=byWin'
-num <- seq(1000, 1124)
+num <- seq(st, ed)
 
 # 빈 데이터프레임 생성
 all_winning_numbers <- data.frame()
